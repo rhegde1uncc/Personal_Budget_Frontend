@@ -1,0 +1,56 @@
+
+  <div class="page-area">
+    <div class="row">
+      <pb-card class="card-container">
+        <h1>Expenses</h1>
+        <div >
+          <canvas  ng-show="!hasDataforChart1" id="donutChart" width="100" height="100"></canvas>
+          <p *ngIf="!hasDataforChart1" class="empty-msg">No data to show! </p>
+        </div>
+      </pb-card>
+      <pb-card class="card-container">
+        <h1>Income Vs Expenses</h1>
+        <div>
+          <canvas ng-show="hasDataforChart2" id="barChart" width="100" height="100"></canvas>
+          <p *ngIf="!hasDataforChart2" class="empty-msg">No data to show! </p>
+        </div>
+      </pb-card>
+      <pb-card class="card-container">
+        <h1>Expense Trend</h1>
+        <div>
+          <canvas ng-show="hasDataforChart3" id="lineChart" width="100" height="100"></canvas>
+          <p *ngIf="!hasDataforChart3" class="empty-msg">No data to show! </p>
+        </div>
+      </pb-card>
+    </div>
+    <div class="table-container">
+      <pb-card class="card-container">
+        <h1>Expense Details</h1>
+        <div >
+          <table *ngIf="hasData" class="table table-hover">
+            <thead>
+              <tr>
+                <th>Spent Date</th>
+                <th>Budget Category</th>
+                <th>Value</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let item of tablerows | paginate: { itemsPerPage: 5, currentPage: p }">
+                <td>{{item.date}}</td>
+                <td>{{item.categoryName}}</td>
+                <td>{{item.value}}</td>
+              </tr>
+            </tbody>
+          </table>
+          <div *ngIf="hasData" class="list">
+
+            <pagination-controls (pageChange)="p = $event"></pagination-controls>
+        </div>
+          <p *ngIf="!hasData" class="empty-msg">No records to show!</p>
+
+        </div>
+
+      </pb-card>
+    </div>
+  </div>

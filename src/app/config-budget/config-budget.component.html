@@ -1,0 +1,56 @@
+
+  <div class="page-area fixed-size">
+    <pb-card class="card-container">
+      <h1>Configure Monthly Expenses</h1>
+      <div>
+        <div class="container">
+          <form
+            [formGroup]="configBudgetForm"
+            (ngSubmit)="addUserBudgetCategoryNames()"
+          >
+            <div class="row">
+              <div class="col-30">
+                <label for="categoryName">Add Expense Category: </label>
+              </div>
+              <div class="col-80">
+                <input
+                  type="text"
+                  id="categoryName"
+                  name="categoryName"
+                  placeholder="Enter Expense Category here.."
+                  formControlName="categoryName"
+                />
+              </div>
+              <div class="col-10"></div>
+            </div>
+            <div class="row">
+              <div class="col-30"></div>
+              <div class="col-80">
+                <input type="submit" class="button" value="Add" />
+              </div>
+              <div class="col-10"></div>
+            </div>
+          </form>
+          <div class="row">
+            <div class="span-column">
+              <table *ngIf="hasData" class="table table-hover">
+                <thead>
+                  <tr>
+                    <th>Added Category List</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let item of tablerows | paginate: { itemsPerPage: 5, currentPage: p }">
+                    <td>{{item}}</td>
+                  </tr>
+                </tbody>
+              </table>
+              <div *ngIf="hasData" class="list">
+                <pagination-controls (pageChange)="p = $event"></pagination-controls>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </pb-card>
+  </div>

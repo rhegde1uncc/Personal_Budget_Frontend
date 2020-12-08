@@ -1,0 +1,17 @@
+.breadcrumb li {
+  display: inline;
+}
+.breadcrumb li+li:before {
+  content: " > ";
+  color: gray;
+}
+.breadcrumb{
+  background-color:  #f2edf3;
+  padding: 20px;
+  a{
+    color: gray;
+  }
+}
+ol.breadcrumb{
+  margin: 0px;
+}

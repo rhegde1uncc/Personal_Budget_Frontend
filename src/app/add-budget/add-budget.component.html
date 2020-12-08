@@ -1,0 +1,71 @@
+
+  <div class="page-area fixed-size">
+    <pb-card class="card-container">
+      <h1>Add Expenses</h1>
+      <div>
+        <div class="container">
+          <form [formGroup]="addBudgetForm" (ngSubmit)="addBudgetToUser()">
+            <div class="row">
+              <div class="col-50">
+                <label for="entryDate">Date:</label>
+              </div>
+              <div class="col-40">
+                <input type="date" id="entryDate" name="entryDate" formControlName="date">
+              </div>
+              <div class="col-10"></div>
+            </div>
+            <div class="row">
+              <div class="col-50">
+                <label for="categoryName">Your Expense Category: </label>
+              </div>
+              <div class="col-40">
+                <select id="category" name="category" formControlName="categoryName">
+                  <option [value]="category" *ngFor="let category of categoryNames">{{category}}</option>
+                </select>
+              </div>
+              <div class="col-10"></div>
+            </div>
+            <div class="row">
+              <div class="col-50">
+                <label for="categoryvalue">Value: </label>
+              </div>
+              <div class="col-40">
+                <input type="text" id="categoryvalue" name="categoryvalue" formControlName="value"/>
+              </div>
+              <div class="col-10"></div>
+            </div>
+            <div class="row">
+              <div class="col-50"></div>
+              <div class="col-10">
+                <input type="submit" class="button" value="Add Expense" />
+              </div>
+              <div class="col-10"></div>
+            </div>
+          </form>
+          <div class="row">
+            <div class="span-column">
+              <table *ngIf="hasData" class="table table-hover">
+                <thead>
+                  <tr>
+                    <th>Spent Date</th>
+                    <th>Budget Category</th>
+                    <th>Value</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let item of tablerows | paginate: { itemsPerPage: 5, currentPage: p }">
+                    <td>{{item.date}}</td>
+                    <td>{{item.categoryName}}</td>
+                    <td>{{item.value}}</td>
+                  </tr>
+                </tbody>
+              </table>
+              <div *ngIf="hasData" class="list">
+                <pagination-controls (pageChange)="p = $event"></pagination-controls>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </pb-card>
+  </div>

@@ -1,0 +1,29 @@
+@import '../../assets/scss/variables';
+
+div.hero {
+  height: 350px;
+  background-color:#e5d9f3;
+  background-size: 300px;
+  background-size:  45% 100%;
+  background-image: url('/assets/images/10.jpg');
+  background-repeat: no-repeat;
+  background-position: center ;
+  padding-top: 40px;
+}
+
+div.hero h1,
+div.hero h2 {
+  text-align: center;
+  margin: 0;
+}
+
+div.hero h1 {
+  color: $violet;
+  font-size: 4.2em;
+  margin-bottom: 20px;
+}
+
+div.hero h2 {
+  color: #4d5791;
+}
+

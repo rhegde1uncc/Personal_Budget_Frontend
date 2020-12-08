@@ -1,0 +1,30 @@
+
+<pb-breadcrumb></pb-breadcrumb>
+
+<!-- This is an A11y Change : added role for element-->
+<main
+  role="main"
+  id="main"
+  class="container center"
+  itemscope
+  itemtype="https://schema.org/SoftwareApplication"
+>
+  <div class="page-area">
+    <pb-modal id="1">
+      <h1>A Custom Modal!</h1>
+      <p>Hello! <input type="text" [(ngModel)]="bodyText" /></p>
+      <button (click)="closeModal('1');">Close</button>
+      <button (click)="refreshToken();">Extend Session</button>
+
+    </pb-modal>
+    <div class="button-container">
+      <div class="btn-group">
+      <button class="button"  (click)="goToPage('/config')">Configure</button>
+      <button class="button" (click)="goToPage('/add')">Add</button>
+      <button class="button" (click)="goToPage('/income')">Config Income</button>
+    </div>
+    </div>
+  </div>
+  <router-outlet></router-outlet>
+</main>
+

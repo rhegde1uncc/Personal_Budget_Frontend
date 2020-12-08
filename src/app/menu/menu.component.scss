@@ -1,0 +1,67 @@
+@import '../../assets/scss/variables';
+
+nav.menu {
+  width: 100%;
+  background-color:  #fff;
+  height: 44px;
+  padding: 0 40px;
+}
+
+nav.menu ul,
+nav.menu ul li {
+  margin: 0;
+  padding: 0 ;
+  list-style: none;
+  display: inline-block;
+
+}
+
+nav.menu ul li a {
+  display: block;
+  padding: 0 20px;
+  line-height: 44px;
+  font-size: 1.4em;
+  text-decoration: none;
+  color: $violet;
+  margin: 0;
+}
+
+nav.menu ul li a:hover  {
+  background-color: white;
+  color: rgb(201, 128, 250);
+}
+.right{
+  display: block;
+  padding: 0 20px;
+  line-height: 44px;
+  font-size: 1.4em;
+  text-decoration: none;
+  color: $violet;
+  margin: 0;
+  float: right;
+}
+nav.menu a:hover  {
+  background-color: white;
+  color: rgb(201, 128, 250);
+}
+
+.button{
+  margin: 1%;
+  vertical-align:-10%
+}
+.button {
+  background-color: $violet; /* rgb(186, 186, 248);; /* Green background */
+  border: 1px ; /* Green border */
+  color: white; /* White text */
+  padding: 10px 24px; /* Some padding */
+  cursor: pointer; /* Pointer/hand icon */
+  float: right; /* Float the buttons side by side */
+  border-radius: 0.5rem;
+  margin-bottom: 5%;
+}
+
+
+/* Add a background color on hover */
+.button:hover {
+  background-color: rgb(186, 186, 248);/* rgb(201, 128, 250); /* rgb(159, 141, 192); rgb(186, 186, 248)*/
+}

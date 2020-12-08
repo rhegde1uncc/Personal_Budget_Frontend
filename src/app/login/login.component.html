@@ -1,0 +1,62 @@
+<!-- This is an A11y Change : added role for element-->
+<main
+  role="main"
+  id="main"
+  class="container center"
+  itemscope
+  itemtype="https://schema.org/SoftwareApplication"
+>
+  <div class="page-area fixed-size">
+    <pb-card class="card-container">
+      <h1>Please Sign in to continue</h1>
+      <div>
+        <div class="container">
+          <form [formGroup]="loginForm" (ngSubmit)="loginUser()">
+            <div class="row">
+              <div class="col-50">
+                <label for="uname">User Name: </label>
+              </div>
+              <div class="col-50">
+                <input
+                  type="text"
+                  id="uname"
+                  name="uname"
+                  formControlName="username"
+                />
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-50">
+                <label for="pwd">Password: </label>
+              </div>
+              <div class="col-40">
+                <input
+                  type="text"
+                  id="pwd"
+                  name="pwd"
+                  formControlName="password"
+                />
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-30"></div>
+              <div class="col-40">
+                <input type="submit" id="submit" value="Sign In" />
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-30">
+                <label for="email"
+                  >Do not have account? Please Register!
+                </label>
+              </div>
+              <div class="col-40">
+                <button  id="signup" value="Sign Up"  (click)="goToPage('/signup')" >Sign Up</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </pb-card>
+  </div>
+</main>
