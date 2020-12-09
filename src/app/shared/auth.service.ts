@@ -49,7 +49,7 @@ export class AuthService {
         user.id = res.user.id;
         this.currentUser = user;
         this.isUserLoggedIn.next(true);
-        //this.setTimer(true);   //uncomment to track session
+        this.setTimer(true);   //uncomment to track session
       });
   }
 
