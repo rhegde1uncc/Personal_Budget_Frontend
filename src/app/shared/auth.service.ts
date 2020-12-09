@@ -16,8 +16,7 @@ import { User } from './user';
 })
 export class AuthService {
 
-   endpoint = '/api'
-  //endpoint = 'http://167.99.6.29:3000/api';
+  endpoint = '/api'
   //endpoint = 'http://localhost:3000/api';
   headers = new HttpHeaders().set('Content-Type', 'application/json');
   currentUser: any;
@@ -50,35 +49,9 @@ export class AuthService {
         user.id = res.user.id;
         this.currentUser = user;
         this.isUserLoggedIn.next(true);
-        this.setTimer(true);   //uncomment to track session
+        //this.setTimer(true);   //uncomment to track session
       });
   }
-
-  // public setTimer(flag){
-  //   if (flag){
-  //     this.timerId = setInterval(() => {
-  //       const exp = localStorage.getItem('exp');
-  //       const expdate = new Date(0).setUTCSeconds(Number(exp));
-  //       const TokenNotExpired = expdate.valueOf() > new Date().valueOf();
-  //       const lessThanTwentySecRemaining = expdate.valueOf() - new Date().valueOf() <= 20000;
-  //       if (TokenNotExpired && lessThanTwentySecRemaining) {
-  //   const r = confirm(
-  //     'Your session is going to expire in 20 seconds! click OK to extend the session!'
-  //   );
-  //   if (r) {
-  //     this.refreshToken(this.currentUser.id);
-  //   }
-  // }
-  //       if (new Date().valueOf() >= expdate.valueOf()){
-  //         clearInterval(this.timerId);
-  //         this.router.navigate(['/login']);
-  //         console.log('clear interval');
-  // }
-  //     }, 20000);
-  //   } else {
-  //     clearInterval(this.timerId);
-  //   }
-  // }
 
   public setTimer(flag){
     if (flag){
@@ -93,6 +66,7 @@ export class AuthService {
         if (new Date().valueOf() >= expdate.valueOf()){
           clearInterval(this.timerId);
           this.router.navigate(['/login']);
+          this.isUserLoggedIn.next(false);
           console.log('clear interval');
   }
       }, 20000);

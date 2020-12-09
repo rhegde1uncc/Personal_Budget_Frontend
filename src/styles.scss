@@ -1,4 +1,4 @@
-@import './assets/scss/variables';
+
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 
@@ -429,7 +429,7 @@ body {
 }
 
 section h1{
-  color: $violet;
+  color: #663399;
   text-align: center;
 }
 
@@ -444,4 +444,210 @@ section h1{
   text-align: center;
 }
 
-.material-icons {vertical-align:-17%; color: $violet}
+.material-icons {vertical-align:-17%; color: #663399}
+
+
+//---------------------buttons--------------------------------------------//
+
+.button{
+  margin: 1%;
+  vertical-align:-10%
+}
+.button {
+  background-color: #663399;
+  border: 1px ;
+  color: white;
+  padding: 10px 24px;
+  //cursor: pointer;
+  float: right;
+  border-radius: 0.5rem;
+  margin-bottom: 5%;
+}
+
+
+/* Add a background color on hover */
+.button:hover {
+  background-color: rgb(201, 128, 250);/* rgb(238, 186, 248); /* rgb(159, 141, 192); rgb(186, 186, 248)*/
+}
+
+.button:focus {
+  border: none !important;
+  outline: none !important;
+}
+.button{
+  margin: 1%;
+}
+
+.btn-group button {
+  background-color: #663399; /* rgb(186, 186, 248); */
+  //border: 1px ;
+  color: white;
+  padding: 10px 24px;
+  //cursor: pointer; /* Pointer/hand icon */
+  float: right; /* Float the buttons side by side */
+}
+
+// .btn-group:after {
+//   content: "";
+//   clear: both;
+//   display: table;
+// }
+
+.btn-group button:not(:last-child) {
+  border-right: none; /* Prevent double borders */
+}
+
+/* Add a background color on hover */
+.btn-group button:hover {
+  background-color:  rgb(201, 128, 250);/* rgb(201, 128, 250); /* rgb(159, 141, 192); rgb(186, 186, 248)*/
+}
+
+.button-container {
+  width: 89%;
+  margin-left:2%;
+
+}
+
+
+.modal-button{
+  background-color: #663399;
+  color: #fff;
+  border: none;
+  margin: 1%;
+  padding: 5px 8px;
+  border-radius: 1px;
+}
+
+.modal-button:hover {
+  background-color:  rgb(201, 128, 250);
+}
+
+
+
+//-----------------------------Table---------------------------------------//
+.table{
+  width: 100%;
+  text-align: justify;
+  background-color: #fff;
+  padding: 2%;
+  color: rgb(82, 81, 81);
+  border-collapse: collapse;
+  overflow-y:auto;
+}
+
+th{
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #663399; /*rgb(186, 186, 248);*/
+  color: white;
+}
+tr:hover {background-color: #ddd;}
+tr:nth-child(even){background-color: #f2f2f2;}
+
+td, th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.table-container {
+  width: 80%;
+  margin-left:7.2%;
+
+}
+
+
+
+//-----------------------------------------card---------------------------------------//@at-root
+
+.card-container{
+  display: inline-block;
+  width: 80%;
+  height:100%;
+  text-align: justify;
+  background-color: #fff;
+  padding: 5%;
+  h1{
+    color: #663399;
+    text-align: center;
+    //margin-left: -8%;
+  }
+}
+
+.card-content{
+  padding: 5%;
+}
+.card-content p{
+color: #663399;
+text-align: center;
+}
+
+
+// -----------------------------------------input-----------------------------------
+
+input[type=text], input[type=date], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+  color: #663399;
+}
+
+input[type=submit] {
+  background-color: #663399;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  //cursor: pointer;
+  float: right;
+}
+
+
+input[type=submit]:focus {
+  border: none !important;
+  outline: none !important;
+}
+//----------------------------------------Row column grid adjustments----------------------------
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+.span-column{
+  padding-top: 20px;
+  grid-column: 1 / span 2;
+}
+
+//------------------------------Pagination------------------------------
+.ngx-pagination .current{
+  background:  #663399 !important;
+}
+

@@ -1,10 +1,10 @@
-@import '../../assets/scss/variables';
+
 .card {
   border: 0;
   background: #f2edf3;
   height:100%;
   .card-body {
-    padding: $card-padding-y $card-padding-x;
+    padding: 2.5rem 2.5rem;
     height:100%;
     + .card-body {
       padding: 1rem;
@@ -12,11 +12,19 @@
     }
   }
   .card-title {
-    color: $violet;
+    color: #663399;
     margin-bottom: .75rem;
     text-transform: capitalize;
-    font-family: $type1-medium;
+    font-family: 'ubuntu-medium', sans-serif;;
     font-size: 1.125rem;
+  }
+
+  .card-title:hover {
+    color:  rgb(201, 128, 250);
+  }
+
+  .material-icons:hover{
+    color:  rgb(201, 128, 250);
   }
   .card-content p {
     color: gray;
@@ -24,15 +32,15 @@
     font-family: Tahoma, Helvetica, Arial, sans-serif;;
   }
   .card-subtitle {
-    font-family: $type1-regular;
+    font-family: 'ubuntu-medium', sans-serif;;
     margin-top: 0.625rem;
     margin-bottom: 0.625rem;
 
   }
   .card-description {
     margin-bottom: 1.5rem;
-    font-family: $type1-regular;
-    color: $card-description-color;
+    font-family: 'ubuntu-medium', sans-serif;;
+    color: #76838f;
   }
   &.card-img-holder {
     position: relative;

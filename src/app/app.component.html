@@ -3,6 +3,13 @@
       Skip to content
     </a>
 <pb-menu></pb-menu>
+<pb-modal id="modelId">
+  <h1>Hello!</h1>
+ <!--<p>Hello! <input type="text" [(ngModel)]="bodyText" /></p>-->
+  <p>Your session is going to expire in 20 seconds! click OK to extend the session!</p>
+  <button class="modal-button" (click)="closeModal('modelId');">Close</button>
+  <button  class="modal-button" (click)="refreshToken();">Extend Session</button>
 
+</pb-modal>
 <router-outlet></router-outlet>
 <pb-footer></pb-footer>
