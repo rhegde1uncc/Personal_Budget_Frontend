@@ -16,8 +16,8 @@ import { User } from './user';
 })
 export class AuthService {
 
-  endpoint = 'http://167.99.6.29:3000/api';
-  //endpoint = 'http://localhost:3000/api';
+  //endpoint = 'http://167.99.6.29:3000/api';
+  endpoint = 'http://localhost:3000/api';
   headers = new HttpHeaders().set('Content-Type', 'application/json');
   currentUser: any;
   isUserLoggedIn = new Subject<boolean>();
