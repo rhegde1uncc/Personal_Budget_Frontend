@@ -1,11 +1,11 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ActivatedRoute } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
-import { convertToParamMap} from '@angular/router';
+import { convertToParamMap } from '@angular/router';
 import { AppRoutingModule } from '../app-routing.module';
 
 import { DashboardDetailComponent } from './dashboard-detail.component';
-import { Observable, of, from} from 'rxjs';
+import { of } from 'rxjs';
 
 describe('DashboardDetailComponent', () => {
   let component: DashboardDetailComponent;
@@ -13,19 +13,19 @@ describe('DashboardDetailComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [
-        AppRoutingModule,
-        HttpClientModule
-      ],
-      declarations: [ DashboardDetailComponent ],
+      imports: [AppRoutingModule, HttpClientModule],
+      declarations: [DashboardDetailComponent],
       providers: [
         {
           provide: ActivatedRoute,
-          useValue: { params: of([{ id: '1'}]) }
-        }
+          useValue: {
+            params: of({
+              id: 2,
+            }),
+          },
+        },
       ],
-    })
-    .compileComponents();
+    }).compileComponents();
   });
 
   beforeEach(() => {
