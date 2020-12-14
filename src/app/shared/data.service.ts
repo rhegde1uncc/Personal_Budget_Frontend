@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { Observable, throwError } from 'rxjs';
-import { catchError, map } from 'rxjs/operators';
 import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { Budget } from './budget';
@@ -20,6 +19,7 @@ export class DataService {
 
      }
 // Services for add-budget-component
+
      // add budget details for user
      public addBudgetToUser(budget: Budget): Observable<any> {
       const api = `${this.endpoint}/budget/add`;
@@ -38,6 +38,7 @@ export class DataService {
     }
 
 // Services for add-income-component
+
     // add income details for user
     public addIncome(income: Income): Observable<any> {
       const api = `${this.endpoint}/income/add`;
@@ -69,6 +70,7 @@ export class DataService {
     }
 
 // Services for config-budget-component
+
  // add budget category
  public addUserBudgetCategoryNames(budget: Budget): Observable<any> {
   const api = `${this.endpoint}/budget/config`;

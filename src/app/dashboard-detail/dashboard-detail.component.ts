@@ -106,7 +106,6 @@ export class DashboardDetailComponent implements OnInit {
       if (!Number.isFinite(this.id)){
         this.id = authService.currentUser.id;
       }
-      //this.id = authService.currentUser.id;
     }
 
   ngOnInit(): void {

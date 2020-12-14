@@ -18,7 +18,8 @@ export class AuthService {
 
   endpoint = '/api'
   //endpoint = 'http://localhost:3000/api';
-  headers = new HttpHeaders().set('Content-Type', 'application/json');
+  headers = new HttpHeaders().set('Content-Type', 'application/json').set('Accept-Encoding', 'gzip');
+
   currentUser: any;
   isUserLoggedIn = new Subject<boolean>();
   isOpenModel = new Subject<boolean>();
@@ -53,6 +54,7 @@ export class AuthService {
       });
   }
 
+  // Timer for frontend auth monitoring
   public setTimer(flag){
     if (flag){
       this.timerId = setInterval(() => {
@@ -117,7 +119,6 @@ export class AuthService {
     localStorage.removeItem('access_token');
     localStorage.removeItem('refresh_token');
     this.currentUser = {};
-    //this.isUserLoggedIn = false;
     this.isUserLoggedIn.next(false);
     this.router.navigate(['/login']);
   }

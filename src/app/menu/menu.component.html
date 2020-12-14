@@ -2,7 +2,7 @@
 <nav role="navigation" class="menu">
   <ul>
   <li><a [routerLink]="['/']" ><i class="material-icons">home</i>Home</a></li>
-  <li><a [routerLink]="['/about']" ><i class="material-icons">info</i>About</a></li>
+  <li><a id ="about" [routerLink]="['/about']" ><i class="material-icons">info</i>About</a></li>
   <li><a [routerLink]="['/login']" ><i class="material-icons">login</i>Login</a></li>
   <li><a [routerLink]="['/contact']" ><i class="material-icons">contacts</i>Contact</a></li>
   <li *ngIf="isUserLoggedIn"><a  (click)="goToDashboard('/dashboard')" ><i class="material-icons">menu</i>Dashboard</a></li>

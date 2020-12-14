@@ -396,6 +396,7 @@ body {
   height: 50px;
   background-color: #fff;;
   padding: 30px;
+  color: gray;
 }
 
 
@@ -577,9 +578,11 @@ td, th {
 .card-content{
   padding: 5%;
 }
-.card-content p{
-color: #663399;
-text-align: center;
+
+.card-content p {
+  font-size: 14px;
+  color: gray;
+  text-align: center;
 }
 
 
