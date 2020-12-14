@@ -67,6 +67,7 @@ export class AuthService {
         }
         if (new Date().valueOf() >= expdate.valueOf()){
           clearInterval(this.timerId);
+          this.isOpenModel.next(false);
           this.router.navigate(['/login']);
           this.isUserLoggedIn.next(false);
           console.log('clear interval');

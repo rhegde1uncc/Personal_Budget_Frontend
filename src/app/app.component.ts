@@ -16,6 +16,8 @@ export class AppComponent implements OnInit{
     this.authService.getAuthModalStatus().subscribe((status) => {
       if (status) {
         this.openModal('modelId');
+      }else{
+        this.closeModal('modelId');
       }
     });
 }

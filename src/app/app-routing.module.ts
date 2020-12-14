@@ -77,6 +77,7 @@ const routes: Routes = [
       {
         path: 'add',
         component: AddBudgetComponent,
+        canActivate: [AuthGuard],
         data: {
           breadcrumb: 'add',
         },
