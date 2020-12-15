@@ -16,8 +16,8 @@ import { User } from './user';
 })
 export class AuthService {
 
-  endpoint = '/api'
-  //endpoint = 'http://localhost:3000/api';
+  endpoint = '/api' // url for deployment on apps platform
+  //endpoint = 'http://localhost:3000/api';  // for local
   headers = new HttpHeaders().set('Content-Type', 'application/json').set('Accept-Encoding', 'gzip');
 
   currentUser: any;

@@ -14,8 +14,10 @@ export class BreadcrumbComponent implements OnInit {
     distinctUntilChanged(),
     map((event) => this.buildBreadCrumb(this.activatedRoute.root))
   );
-
-  constructor(private activatedRoute: ActivatedRoute, private router: Router) {}
+  id: number;
+  constructor(private activatedRoute: ActivatedRoute, private router: Router) {
+    this.activatedRoute.params.subscribe( params => {this.id = params.id; });
+  }
 
   ngOnInit(): void {}
 
@@ -33,7 +35,10 @@ export class BreadcrumbComponent implements OnInit {
     console.log('path', path);
     // In the routeConfig the complete path is not available,
     // so we rebuild it each time
-    const nextUrl = `${url}${path}/`;
+    var nextUrl = `${url}${path}/`;
+    if(nextUrl.includes(":id")){
+      nextUrl = nextUrl.replace(":id", (this.id).toString());
+    }
     console.log('nextUrl', nextUrl);
     const breadcrumb = {
       label,

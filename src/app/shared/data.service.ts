@@ -10,8 +10,8 @@ import { Income } from './income';
 })
 export class DataService {
 
-  endpoint = '/api'
-  //endpoint = 'http://localhost:3000/api';
+  endpoint = '/api'  // url for deployment on apps platform
+  //endpoint = 'http://localhost:3000/api'; // for local
   headers = new HttpHeaders().set('Content-Type', 'application/json');
 
   constructor(private http: HttpClient,
