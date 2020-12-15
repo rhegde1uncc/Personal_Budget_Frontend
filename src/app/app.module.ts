@@ -24,7 +24,6 @@ import { ConfigIncomeComponent } from './config-income/config-income.component';
 import {NgxPaginationModule} from 'ngx-pagination';
 import { DashboardDetailComponent } from './dashboard-detail/dashboard-detail.component';
 import { ModalComponent } from './modal/modal.component';
-import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 @NgModule({
   declarations: [
