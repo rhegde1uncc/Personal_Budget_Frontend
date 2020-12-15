@@ -38,6 +38,7 @@ export class ConfigIncomeComponent implements OnInit {
   public addMonthlyIncomeToUser(): void {
     this.dataService.addIncome(this.addIncomeForm.value).subscribe((res: any) => {
       this.getIncome();
+      this.addIncomeForm.reset();
     });
 
   }

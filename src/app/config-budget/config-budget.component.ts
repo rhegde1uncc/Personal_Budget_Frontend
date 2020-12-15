@@ -47,7 +47,9 @@ export class ConfigBudgetComponent implements OnInit {
       .addUserBudgetCategoryNames(this.configBudgetForm.value)
       .subscribe((res: any) => {
         this.getUserBudgetCategoryNames();
+        this.configBudgetForm.reset();
       });
+
   }
 
   // get all the categoryName values for user

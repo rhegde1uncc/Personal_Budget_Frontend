@@ -55,6 +55,7 @@ export class AddBudgetComponent implements OnInit {
   public addBudgetToUser(): void {
     this.dataService.addBudgetToUser(this.addBudgetForm.value).subscribe((res: any) => {
       this.getAllUserBudgetData();
+      this.addBudgetForm.reset();
     });
 
   }
