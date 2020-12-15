@@ -62,7 +62,7 @@ export class AuthService {
         const expdate = new Date(0).setUTCSeconds(Number(exp));
         const TokenNotExpired = expdate.valueOf() > new Date().valueOf();
         const lessThanTwentySecRemaining = expdate.valueOf() - new Date().valueOf() <= 20000;
-        if (TokenNotExpired && lessThanTwentySecRemaining) {
+        if (this.isLoggedIn() && TokenNotExpired && lessThanTwentySecRemaining) {
           this.isOpenModel.next(true);
         }
         if (new Date().valueOf() >= expdate.valueOf()){
