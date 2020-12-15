@@ -4,6 +4,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from '../app-routing.module';
 import { AddBudgetComponent } from './add-budget.component';
 import { ActivatedRoute } from '@angular/router';
+import { NO_ERRORS_SCHEMA } from '@angular/core';
 
 describe('AddBudgetComponent', () => {
   let component: AddBudgetComponent;
@@ -18,6 +19,7 @@ describe('AddBudgetComponent', () => {
         AppRoutingModule
       ],
       declarations: [ AddBudgetComponent ],
+      schemas: [NO_ERRORS_SCHEMA],
       providers: [
         {
           provide: ActivatedRoute,

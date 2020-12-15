@@ -6,6 +6,7 @@ import { AppRoutingModule } from '../app-routing.module';
 
 import { DashboardDetailComponent } from './dashboard-detail.component';
 import { of } from 'rxjs';
+import { NO_ERRORS_SCHEMA } from '@angular/core';
 
 describe('DashboardDetailComponent', () => {
   let component: DashboardDetailComponent;
@@ -15,6 +16,7 @@ describe('DashboardDetailComponent', () => {
     await TestBed.configureTestingModule({
       imports: [AppRoutingModule, HttpClientModule],
       declarations: [DashboardDetailComponent],
+      schemas: [NO_ERRORS_SCHEMA],
       providers: [
         {
           provide: ActivatedRoute,

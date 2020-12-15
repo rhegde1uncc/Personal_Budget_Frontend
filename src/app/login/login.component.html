@@ -16,11 +16,13 @@
                 <label for="uname">User Name: </label>
               </div>
               <div class="col-50">
+                <!--This is an A11y Change: added area label -->
                 <input
                   type="text"
                   id="uname"
                   name="uname"
                   formControlName="username"
+                  aria-required="true"
                 />
               </div>
             </div>
@@ -29,11 +31,13 @@
                 <label for="pwd">Password: </label>
               </div>
               <div class="col-40">
+                <!--This is an A11y Change: added area label -->
                 <input
                   type="text"
                   id="pwd"
                   name="pwd"
                   formControlName="password"
+                  aria-required="true"
                 />
               </div>
             </div>

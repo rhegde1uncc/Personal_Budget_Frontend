@@ -1,14 +1,14 @@
     <!-- This is an A11y Change : added skip to content -->
-    <a class="hidden" href="#main">
+    <a class="skip-to-content-link" href="#main">
       Skip to content
     </a>
 <pb-menu></pb-menu>
 <pb-modal id="modelId">
   <h1>Hello!</h1>
  <!--<p>Hello! <input type="text" [(ngModel)]="bodyText" /></p>-->
-  <p>Your session is going to expire in 20 seconds! click OK to extend the session!</p>
+  <p>Your session is going to expire in 20 seconds! click on Extend to extend the session!</p>
   <button class="modal-button" (click)="closeModal('modelId');">Close</button>
-  <button  class="modal-button" (click)="refreshToken();">Extend Session</button>
+  <button  class="modal-button" (click)="refreshToken();">Extend </button>
 
 </pb-modal>
 <router-outlet></router-outlet>

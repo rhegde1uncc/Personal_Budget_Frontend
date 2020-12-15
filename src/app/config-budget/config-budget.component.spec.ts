@@ -5,6 +5,7 @@ import { AppRoutingModule } from '../app-routing.module';
 
 import { ConfigBudgetComponent } from './config-budget.component';
 import { ActivatedRoute } from '@angular/router';
+import { NO_ERRORS_SCHEMA } from '@angular/core';
 
 describe('ConfigBudgetComponent', () => {
   let component: ConfigBudgetComponent;
@@ -20,6 +21,7 @@ describe('ConfigBudgetComponent', () => {
         AppRoutingModule
       ],
       declarations: [ ConfigBudgetComponent ],
+      schemas: [NO_ERRORS_SCHEMA],
       providers: [
         {
           provide: ActivatedRoute,

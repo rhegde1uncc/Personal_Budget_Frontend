@@ -5,6 +5,7 @@ import { AppRoutingModule } from '../app-routing.module';
 
 
 import { SignupComponent } from './signup.component';
+import { NO_ERRORS_SCHEMA } from '@angular/core';
 
 describe('SignupComponent', () => {
   let component: SignupComponent;
@@ -18,7 +19,8 @@ describe('SignupComponent', () => {
         HttpClientModule,
         AppRoutingModule
       ],
-      declarations: [ SignupComponent ]
+      declarations: [ SignupComponent ],
+      schemas: [NO_ERRORS_SCHEMA]
     })
     .compileComponents();
   });
