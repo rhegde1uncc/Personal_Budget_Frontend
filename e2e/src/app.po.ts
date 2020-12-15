@@ -6,6 +6,6 @@ export class AppPage {
   }
 
   async getTitleText(): Promise<string> {
-    return element(by.css('pb-root .hidden')).getText();
+    return element(by.css('pb-root .skip-to-content-link')).getText();
   }
 }

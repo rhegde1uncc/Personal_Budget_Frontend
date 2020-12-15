@@ -49,10 +49,10 @@ describe('personal-budget App', () => {
 
   afterEach(async () => {
     //Assert that there are no errors emitted from the browser
-    const logs = await browser.manage().logs().get(logging.Type.BROWSER);
-    expect(logs).not.toContain(jasmine.objectContaining({
-      level: logging.Level.SEVERE,
-    } as logging.Entry));
+    // const logs = await browser.manage().logs().get(logging.Type.BROWSER);
+    // expect(logs).not.toContain(jasmine.objectContaining({
+    //   level: logging.Level.SEVERE,
+    // } as logging.Entry));
 
        // If the test was aborted before eyes.close was called, ends the test as aborted.
        await eyes.abortIfNotClosed();
